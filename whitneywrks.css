@@ -1,0 +1,531 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "Barbie";
+  src: url("fonts/barbie.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset and Base Styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: fantasy;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffe0e9;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Barbie", Arial, sans-serif;
+  font-size: 3em;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #ff91ac;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar a,
+.title {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Barbie", Arial, sans-serif;
+}
+
+.navbar a:hover {
+  color: rgb(26, 0, 13);
+}
+
+/* Title and Headings */
+.title {
+  color: #f20f80;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  color: #f20f80;
+}
+
+/* Paragraphs and Links */
+p {
+  margin-bottom: 1rem;
+  color: #20b2aa;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(26, 0, 13);
+}
+
+/* Main Content Container */
+.container.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 16px;
+  justify-content: center;
+  align-content: start;
+}
+
+/* Whitney Cards */
+.whitney-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.whitney-card .switch-2,
+.whitney-card .control-checkbox {
+  justify-content: flex-start;
+}
+
+.whitney-card form {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Code Block Styling within Whitney Cards */
+.whitney-card pre {
+  background-color: #f8f8f8;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.whitney-card code {
+  font-family: "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 10px;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+/* Specific Styling for <pre> elements in the cards to match the Whitney theme */
+.whitney-card pre {
+  background-color: #fff0f5;
+  color: #d26a8d;
+}
+
+/* Adjust the layout of Whitney Cards to prevent overflow and improve legibility */
+.whitney-card {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Ensure pre elements do not exceed the width of their containers */
+.whitney-card pre {
+  max-width: 100%;
+}
+
+/* Button Styles */
+button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff91ac;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#popular {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* This will make all the cards stretch to the same height */
+  gap: 20px; /* Space between cards */
+}
+
+/* Individual Cards */
+.card {
+  flex: 0 1 calc(33.333% - 1rem);
+  background-color: pink;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  background-color: #f20f80;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Card Content */
+.card h3,
+.card p {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 0 1 100%;
+  }
+}
+
+/* Forms and Inputs */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+  color: #ff69b4;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ff91ac;
+  border-radius: 4px;
+}
+
+/* Custom Checkbox and Switch */
+.switch-2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.switch-2 input:checked + .slider {
+  background-color: #ff91ac;
+}
+
+.control-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.control-checkbox .checkbox-custom {
+  width: 20px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.control-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #ff91ac;
+}
+
+/* Footer Styles */
+.page-footer {
+  background-color: #ff91ac;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer .footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.page-footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-footer .footer-content {
+    flex-direction: column;
+  }
+
+  .page-footer ul {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Final Assessment Additions */
+
+/* Ensure the body and html take the full width */
+body, html {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block; /* default display for body and html */
+}
+
+section#nav {
+  min-height: auto;
+}
+
+
+
+/* Style the images inside the cards */
+.card img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 2px; 
+}
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  #popular {
+    flex-direction: column;
+  }
+
+  .popular .card {
+    flex-basis: auto; /* Cards take the width of the container */
+  }
+}
+
+main {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 20px; /* Adjust padding as necessary */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Create exactly 10 columns */
+  grid-template-rows: repeat(10, 1fr); /* Create exactly 10 rows */
+  grid-gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.swatch {
+  width: 90%; 
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 4px;
+}
+
+/* Shopping Cart Styles */
+#cart {
+  background-color: #fff; 
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
+  max-width: 800px; 
+}
+
+#cart h1 {
+  text-align: center;
+  color: #f20f80;
+}
+
+#items {
+  list-style: none;
+  padding: 0;
+}
+
+#items li {
+  background-color: #ffe0e9; 
+  border: 1px solid #ff91ac; 
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#items li span {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 100px;
+  padding: 0.75rem;
+  border: 1px solid #ff91ac;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem; 
+}
+
+button {
+  padding: 0.75rem 1rem; 
+  margin: 2px;
+  background-color: #ff69b4;
+  border: none; 
+  border-radius: 4px; 
+  font-size: 1rem; 
+}
+
+/* Total Price Styling */
+#total {
+  font-weight: bold;
+  color: #ff1493; 
+  font-size: 2rem; 
+  text-align: center;
+  margin-top: 1rem; 
+}
+
+/* Contact Form Styles */
+#contact {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h1 {
+  color: #f20f80;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#contact form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+#contact label {
+  display: flex;
+  color: #f20f80;
+  margin-bottom: .5rem;
+}
+
+#contact input[type="text"],
+#contact textarea,
+#contact input[type="email"],
+#contact input[type="checkbox"],
+#contact input[type="radio"] {
+  margin-right: 0.2rem; 
+}
+
+#contact input[type="text"] {
+  margin-top: 0.2rem; 
+}
+
+#contact label {
+  display: flex; 
+  align-items: center; 
+  color: #f20f80;
+  margin-bottom: 0.2rem; 
+}
+
+#contact textarea {
+  height: 150px; 
+}
+
+#contact button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff91ac;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #ff1493;
+}
+
